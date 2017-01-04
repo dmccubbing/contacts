@@ -18,7 +18,7 @@
 	"homepage": "https://github.com/nextcloud/contacts#readme",
 	"scripts": {
 		"test": "node node_modules/gulp-cli/bin/gulp.js karma",
-		"prebuild": "npm install && npm update && node_modules/bower/bin/bower install && node_modules/bower/bin/bower update",
+		"prebuild": "npm install && npm update && node_modules/bower/bin/bower --allow-root install && node_modules/bower/bin/bower --allow-root update",
 		"build": "node node_modules/gulp-cli/bin/gulp.js",
 		"watch": "node node_modules/gulp-cli/bin/gulp.js watch"
 	},
@@ -35,11 +35,12 @@
 		"karma": "^1.2.0",
 		"karma-chai": "^0.1.0",
 		"karma-coverage": "^1.1.1",
-		"karma-firefox-launcher": "^1.0.0",
+		"karma-phantomjs-launcher": "*",
 		"karma-mocha": "^1.1.1",
 		"karma-mocha-reporter": "^2.1.0",
 		"karma-sinon": "^1.0.5",
 		"mocha": "^3.0.2",
+		"phantomjs-prebuilt": "*",
 		"sinon": "^1.17.5"
 	}
 }
